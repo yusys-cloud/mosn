@@ -1277,7 +1277,9 @@ func (s *downStream) onUpstreamResponseRecvFinished() {
 }
 
 func (s *downStream) setupRetry(endStream bool) bool {
-	s.upstreamRequest.setupRetry = true
+	//modify by dengcz 2022/8/31 ,default don't retry
+	//s.upstreamRequest.setupRetry = true
+	s.upstreamRequest.setupRetry = false
 
 	if !endStream {
 		s.upstreamRequest.resetStream()
