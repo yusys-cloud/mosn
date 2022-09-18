@@ -109,16 +109,16 @@ func SetRemoveClusterConfig(clusterName string) {
 
 // add by caofei  SetRemoveListenerConfig update the listerer config when DeleteListerer
 func SetRemoveListenerConfig(listenerName string) {
-	configLock.Lock()
-	defer configLock.Unlock()
+	//configLock.Lock()
+	//	defer configLock.Unlock()
 	delete(conf.Listener, listenerName)
 	tryDump()
 }
 
 // add by caofei SetRemoveRouteConfig update the route config when DeleteRoute
 func SetRemoveRouteConfig(routeName string) {
-	configLock.Lock()
-	defer configLock.Unlock()
+	//configLock.Lock()
+	//	defer configLock.Unlock()
 	delete(conf.Routers, routeName)
 	tryDump()
 }
