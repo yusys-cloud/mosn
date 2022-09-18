@@ -260,7 +260,7 @@ func (ch *connHandler) RemoveListeners(name string) {
 	// add by caofei
 	configmanager.SetRemoveListenerConfig(name)
 	// add by caofei
-	configmanager.SetRemoveRouteConfig(name)
+	//configmanager.SetRemoveRouteConfig(name)
 }
 
 func (ch *connHandler) GracefulStopListener(lctx context.Context, name string) error {

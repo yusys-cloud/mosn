@@ -112,6 +112,7 @@ func SetRemoveListenerConfig(listenerName string) {
 	//configLock.Lock()
 	//	defer configLock.Unlock()
 	delete(conf.Listener, listenerName)
+	delete(conf.Routers, listenerName)
 	tryDump()
 }
 
