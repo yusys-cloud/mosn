@@ -27,9 +27,9 @@ func CreateDefaultErrorLogger(output string, level log.Level) (log.ErrorLogger, 
 		return nil, err
 	}
 
-	return &log.SimpleErrorLog{
+	return &SimpleErrorLog{
 		Logger:    lg,
-		Formatter: log.DefaultFormatter,
+		Formatter: MosnFormatter,
 		Level:     level,
 	}, nil
 }
